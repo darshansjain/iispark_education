@@ -41,6 +41,14 @@ dependencies:
   cloud_firestore: ^4.9.3
   firebase_database: ^10.4.9
   provider: ^6.1.2
+  firebase_storage: ^11.6.9
+  image_picker: ^1.0.8
+  flutter_staggered_animations: ^1.1.1
+  connectivity_plus: ^6.0.3
+  flutter_svg: ^2.0.10+1
+  cached_network_image: ^3.3.1
+  intl: ^0.19.0
+  google_nav_bar: ^5.0.6
 
 dev_dependencies:
   flutter_test:
@@ -65,10 +73,17 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - asset/
+    - asset/mainPlanet.png
+    - asset/levelPlanet.png
     - asset/b1.png
     - asset/signup1.png
     - asset/signIn.png
     - asset/b2.png
+    - asset/levelup.png
+    - asset/Group.png
+    - asset/mainback.png
+    - asset/Vector 8.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

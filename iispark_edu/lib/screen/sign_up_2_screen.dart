@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -10,6 +8,8 @@ import 'package:iispark_edu/screen/sign_in_screen.dart';
 import 'package:provider/provider.dart';
 
 class SignUp2Screen extends StatefulWidget {
+  const SignUp2Screen({super.key});
+
   @override
   _SignUp2ScreenState createState() => _SignUp2ScreenState();
 }
@@ -25,7 +25,8 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
   bool _obscureText = true;
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseDatabase _database = FirebaseDatabase(
-    databaseURL: "hhttps://iispark-edu-default-rtdb.firebaseio.com/",
+    databaseURL:
+        "https://iinspark-edu-default-rtdb.asia-southeast1.firebasedatabase.app/",
   );
 
   void _togglePasswordVisibility() {
@@ -64,7 +65,7 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
           const SnackBar(content: Text('Sign up successful!')),
         );
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => DateOfBirthScreen()),
+          MaterialPageRoute(builder: (context) => const DateOfBirthScreen()),
         );
       } catch (e) {
         setState(() {
@@ -249,7 +250,7 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => SignInScreen()));
+                                builder: (context) => const SignInScreen()));
                           },
                           child: Text(
                             'Sign in',

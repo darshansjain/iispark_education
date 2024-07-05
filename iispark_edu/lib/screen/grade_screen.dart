@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iispark_edu/screen/school_info_screen.dart';
 
 class GradeAndSkillsScreen extends StatefulWidget {
+  const GradeAndSkillsScreen({super.key});
+
   @override
   _GradeAndSkillsScreenState createState() => _GradeAndSkillsScreenState();
 }
@@ -108,8 +110,7 @@ class _GradeAndSkillsScreenState extends State<GradeAndSkillsScreen> {
               });
             },
             style: ElevatedButton.styleFrom(
-              primary: isSelected ? Colors.blue : Colors.white,
-              onPrimary: isSelected ? Colors.white : Colors.black,
+              foregroundColor: isSelected ? Colors.white : Colors.black, backgroundColor: isSelected ? Colors.blue : Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),

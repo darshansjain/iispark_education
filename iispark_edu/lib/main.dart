@@ -1,27 +1,32 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:iispark_edu/core/utils/size_utils.dart';
+import 'package:iispark_edu/presentation/iphone_14_15_pro_max_1_screen/level.dart';
+import 'package:iispark_edu/screen/ShopProd.dart';
+import 'package:iispark_edu/screen/home_screen.dart';
 import 'package:iispark_edu/screen/spash_screen.dart';
-import 'package:iispark_edu/screen/grade_screen.dart';
+import 'package:iispark_edu/theme/theme_helper.dart';
 import 'package:provider/provider.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: const FirebaseOptions(
-      apiKey: "AIzaSyBHS40KIKuvn-XdgzZpOdt-p_Siy44Cun8",
-      //authDomain: "YOUR_AUTH_DOMAIN",
-      projectId: "iispark-edu",
+      apiKey: "AIzaSyCGqxPv6GEmBM8gB0mCVdlJ8z6489Quoog",
+      projectId: "iinspark-edu",
       storageBucket: "iispark-edu.appspot.com",
-      messagingSenderId: "1013218429781",
-      appId: "1:1013218429781:android:abbeeed6f46ffd14fdbddc",
+      messagingSenderId: "1277228618639",
+      appId: "1:277228618639:android:3895305248817d8e6901fa",
     ),
   );
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  ThemeHelper().changeTheme('primary');
 
   runApp(
     ChangeNotifierProvider(
       create: (_) => UserProvider(),
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -29,25 +34,18 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      title: "IIspark Edu",
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          theme: theme, // Ensure you have a method to build your theme
+          debugShowCheckedModeBanner: false,
+          home: const SplashScreen(),
+          title: "IIspark Edu",
+        );
+      },
     );
-  }
-}
-
-class User with ChangeNotifier {
-  UserCredential? _userId;
-
-  UserCredential? get userId => _userId;
-
-  void setUserId(UserCredential userId) {
-    _userId = userId;
-    notifyListeners();
   }
 }
 

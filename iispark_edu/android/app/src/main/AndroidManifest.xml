@@ -1,4 +1,12 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.iispark_edu">
+
+    <uses-sdk
+        tools:overrideLibrary="com.google.firebase.auth"
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30"/> 
+        
     <application
         android:label="iispark_edu"
         android:name="${applicationName}"
@@ -30,4 +38,6 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+   
+
 </manifest>

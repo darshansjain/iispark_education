@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +6,8 @@ import 'package:iispark_edu/screen/grade_screen.dart';
 import 'package:provider/provider.dart';
 
 class DateOfBirthScreen extends StatefulWidget {
+  const DateOfBirthScreen({super.key});
+
   @override
   _DateOfBirthScreenState createState() => _DateOfBirthScreenState();
 }
@@ -18,7 +19,8 @@ class _DateOfBirthScreenState extends State<DateOfBirthScreen> {
 
   final _formKey = GlobalKey<FormState>();
   final FirebaseDatabase _database = FirebaseDatabase(
-    databaseURL: "hhttps://iispark-edu-default-rtdb.firebaseio.com/",
+    databaseURL:
+        "https://iinspark-edu-default-rtdb.asia-southeast1.firebasedatabase.app/",
   );
 
   Future<void> _saveDateOfBirth() async {
@@ -32,8 +34,8 @@ class _DateOfBirthScreenState extends State<DateOfBirthScreen> {
         'dateOfBirth': '$year-$month-$day',
       });
 
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => GradeAndSkillsScreen()));
+      Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => const GradeAndSkillsScreen()));
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Date of birth saved!')),

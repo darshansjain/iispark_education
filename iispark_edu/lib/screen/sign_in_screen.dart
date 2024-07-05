@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:iispark_edu/main.dart';
-import 'package:iispark_edu/screen/dob_screen.dart';
 import 'package:iispark_edu/screen/home_screen.dart';
 import 'package:iispark_edu/screen/sign_up_2_screen.dart';
 import 'package:provider/provider.dart';
 
 class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
+
   @override
   _SignInScreenState createState() => _SignInScreenState();
 }
@@ -39,10 +40,7 @@ class _SignInScreenState extends State<SignInScreen> {
       ));
 
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-            builder: (context) => MyHomePage(
-                  title: "home",
-                )),
+        MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
     } on FirebaseAuthException catch (e) {
       String message;
@@ -196,7 +194,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SignUp2Screen()));
+                              builder: (context) => const SignUp2Screen()));
                         },
                         child: Text(
                           'Sign up',

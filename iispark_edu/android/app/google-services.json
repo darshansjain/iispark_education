@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1013218429781",
-    "project_id": "iispark-edu",
-    "storage_bucket": "iispark-edu.appspot.com"
+    "project_number": "277228618639",
+    "project_id": "iinspark-edu",
+    "storage_bucket": "iinspark-edu.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1013218429781:android:abbeeed6f46ffd14fdbddc",
+        "mobilesdk_app_id": "1:277228618639:android:3895305248817d8e6901fa",
         "android_client_info": {
           "package_name": "com.example.iispark_edu"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBHS40KIKuvn-XdgzZpOdt-p_Siy44Cun8"
+          "current_key": "AIzaSyCGqxPv6GEmBM8gB0mCVdlJ8z6489Quoog"
         }
       ],
       "services": {

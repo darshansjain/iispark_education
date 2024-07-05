@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:iispark_edu/screen/sign_in_screen.dart';
 import 'package:iispark_edu/screen/sign_up_2_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -62,11 +61,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   children: [
                     SizedBox(
                       width: 250,
+                      height: 55,
                       child: ElevatedButton(
                         onPressed: () {
                           print("Sign Up");
                           Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => SignUp2Screen()));
+                              builder: (context) => const SignUp2Screen()));
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
