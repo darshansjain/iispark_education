@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iispark_edu/screen/GetProd.dart';
 import 'package:iispark_edu/screen/MyProfile.dart';
+import 'package:iispark_edu/widgets/bottom_navbar.dart';
 
 class ShopProd extends StatefulWidget {
   const ShopProd({super.key});
@@ -21,37 +22,43 @@ class _ShopProdState extends State<ShopProd> {
       'name': 'Super NOVA',
       'category': 'Smartwatch',
       'price': 20330,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
     {
       'name': 'Phoenix AMOLED',
       'category': 'Smartwatch',
       'price': 21330,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
     {
       'name': 'ASTEROID',
       'category': 'Smartwatch',
       'price': 26330,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
     {
       'name': 'Fire Pods Aura',
       'category': 'EarPods',
       'price': 12300,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
     {
       'name': 'Fire Pods Ninja',
       'category': 'EarPods',
       'price': 12300,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
     {
       'name': 'Lycan GamePods',
       'category': 'EarPods',
       'price': 12300,
-      'image': 'asset/pie.png'
+      'image':
+          'https://s3-alpha-sig.figma.com/img/d7bf/3be6/26872090f18155ce93ad8b4d64b25b6a?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OxVkxr5xtux7nqtji22EveAsOjW~Kbx3X9XRO53qPnsROUTcsRHLi98jR0lqbtdMbyDB3RuTdcmCNRqDWxamgU-xoIzGRVqo0GFSA16qlZOtHKIe22Bv1GXXhMCPP4vi6DU4NibWKah27f0k4rfl0QT5Q3x5ztBW4PnD~o1mMc7W0YMF9tA4lfcDsnRXlVdP7RElRujT4cQjxg3l0K9EmOXxLMP832JblQhDwdyn-s9fulprEF5NeRKIQ1kiSnNR6ZYuESLNGrjs7cE~BJMV9x50DJjxHE93ZMt2hLV~Vk0UVCmU33bef2k2ft6iLW8xE34ORZebLBD6fJZYTjaTXQ__'
     },
   ];
 
@@ -86,6 +93,15 @@ class _ShopProdState extends State<ShopProd> {
         );
       },
     );
+  }
+
+  int _selectedIndex = 1;
+
+  void _onTabChange(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+    // Handle navigation based on the index here if needed
   }
 
   @override
@@ -125,7 +141,8 @@ class _ShopProdState extends State<ShopProd> {
                           child: const Row(
                             children: [
                               CircleAvatar(
-                                backgroundImage: AssetImage("asset/pie.png"),
+                                backgroundImage: NetworkImage(
+                                    "https://s3-alpha-sig.figma.com/img/67e4/eaf1/5b43c1f28163e5266ab0bbbc00c51b48?Expires=1721001600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pVfZxW2E1DqW-KX45UBAjLw3IGyZKOUWDKc1Ab-wzc15yEuzAkj5w4k5wIYkJfBp6PZQpE7v3KiC6R8R8uIt4KEZ9QQuuqQMJsO73G358bEJmoVk8Zmk~yYxVsZz4STcGpRx9s5ot1hnHP1CRAaQzFD~SM5zD0vYxeJzP0Fxz6-S~NgAoSkOWMVs5Rd5Zasi3DOOwlgvq1EKMvxKzx4Idamj7ycj0YGoOsL6rjZbzMZ~VEtZcRSNJ3SG~5mTI4d5poI2oMAS91ShHD0NW2iWoXbPR5K-M6JH4Pw2DI7EjbZlwATw2u8X0HoSj22YZnDfhWCEDHo9i9rtKTWUwHffFA__"),
                                 radius: 30,
                               ),
                               SizedBox(width: 10),
@@ -230,7 +247,7 @@ class _ShopProdState extends State<ShopProd> {
                         child: Column(
                           children: [
                             Expanded(
-                              child: Image.asset(
+                              child: Image.network(
                                 product['image'],
                                 fit: BoxFit.cover,
                               ),
@@ -265,6 +282,10 @@ class _ShopProdState extends State<ShopProd> {
             ),
           ),
         ],
+      ),
+      floatingActionButton: CustomBottomNavBar(
+        selectedIndex: _selectedIndex,
+        onTabChange: _onTabChange,
       ),
     );
   }

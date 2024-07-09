@@ -99,6 +99,7 @@ class _DateOfBirthScreenState extends State<DateOfBirthScreen> {
                     const SizedBox(height: 40),
                     SizedBox(
                       width: 260,
+                      height: 45,
                       child: ElevatedButton(
                         onPressed: _saveDateOfBirth,
                         style: ElevatedButton.styleFrom(

@@ -48,6 +48,7 @@ class _GradeAndSkillsScreenState extends State<GradeAndSkillsScreen> {
               const Spacer(),
               SizedBox(
                 width: 260,
+                height: 45,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
@@ -110,7 +111,8 @@ class _GradeAndSkillsScreenState extends State<GradeAndSkillsScreen> {
               });
             },
             style: ElevatedButton.styleFrom(
-              foregroundColor: isSelected ? Colors.white : Colors.black, backgroundColor: isSelected ? Colors.blue : Colors.white,
+              foregroundColor: isSelected ? Colors.white : Colors.black,
+              backgroundColor: isSelected ? Colors.blue : Colors.white,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),
               ),

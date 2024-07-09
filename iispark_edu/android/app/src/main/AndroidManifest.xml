@@ -8,7 +8,7 @@
         android:targetSdkVersion="30"/> 
         
     <application
-        android:label="iispark_edu"
+        android:label="IISpark Edu"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

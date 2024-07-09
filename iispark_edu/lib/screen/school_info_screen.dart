@@ -195,6 +195,7 @@ class _SchoolInfoState extends State<SchoolInfo> {
             const Spacer(),
             SizedBox(
               width: 260,
+              height: 45,
               child: ElevatedButton(
                 onPressed: () {
                   _saveSchoolData(context);

@@ -24,6 +24,14 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))  
+}
+
+  
+
 android {
     namespace "com.example.iispark_edu"
     compileSdkVersion 34
@@ -39,7 +47,11 @@ android {
     }
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+         main {
+        java {
+            srcDir 'src/main/kotlin'
+        }
+    }
     }
 
     defaultConfig {
@@ -53,14 +65,27 @@ android {
         versionName flutterVersionName
     }
 
-    buildTypes {
+        
+    signingConfigs {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
         }
     }
+    buildTypes {
+        release {
+              // TODO: Add your own signing config for the release build.
+              // Signing with the debug keys for now,
+              // so `flutter run --release` works.
+              signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+        }
+    }
+    
 }
+
 
 flutter {
     source '../..'

@@ -75,6 +75,7 @@ class _DocumentVerificationPageState extends State<DocumentVerificationPage> {
             ),
             SizedBox(
               width: 260,
+              height: 45,
               child: ElevatedButton(
                 onPressed: () async {
                   if (_studentIdFront != null) {
@@ -91,7 +92,7 @@ class _DocumentVerificationPageState extends State<DocumentVerificationPage> {
                   }
 
                   Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const HomeScreen()),
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(

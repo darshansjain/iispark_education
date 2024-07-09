@@ -49,6 +49,11 @@ dependencies:
   cached_network_image: ^3.3.1
   intl: ^0.19.0
   google_nav_bar: ^5.0.6
+  flutter_launcher_icons: ^0.13.1
+flutter_icons:
+  image_path: "icons/logo.png"
+  android: true
+  ios: true
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +89,7 @@ flutter:
     - asset/Group.png
     - asset/mainback.png
     - asset/Vector 8.png
+    - asset/logo.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

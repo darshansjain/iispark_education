@@ -17,7 +17,8 @@ class SignUp2Screen extends StatefulWidget {
 class _SignUp2ScreenState extends State<SignUp2Screen> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _firstnameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   bool loading = false;
@@ -56,7 +57,8 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
             .child('users')
             .child(userCredential.user!.uid)
             .set({
-          'name': _nameController.text.toString(),
+          'first_name': _firstnameController.text.toString(),
+          'last_name': _lastnameController.text.toString(),
           'email': _emailController.text.toString(),
         });
 
@@ -122,12 +124,44 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
                         ],
                       ),
                       child: TextFormField(
-                        controller: _nameController,
+                        controller: _firstnameController,
                         decoration: InputDecoration(
                           filled: true,
                           fillColor: Colors.white,
-                          labelText: 'Name',
-                          hintText: 'Your name',
+                          labelText: 'First Name',
+                          hintText: 'First name',
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            borderSide: BorderSide.none,
+                          ),
+                        ),
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return 'Please enter your name';
+                          }
+                          return null;
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 25),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.8,
+                      decoration: const BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Color.fromRGBO(0, 0, 0, 0.03),
+                            blurRadius: 6,
+                            offset: Offset(0, 7),
+                          ),
+                        ],
+                      ),
+                      child: TextFormField(
+                        controller: _lastnameController,
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Colors.white,
+                          labelText: 'Last Name',
+                          hintText: 'Last name',
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8.0),
                             borderSide: BorderSide.none,
@@ -219,6 +253,7 @@ class _SignUp2ScreenState extends State<SignUp2Screen> {
                     const SizedBox(height: 55),
                     SizedBox(
                       width: 260,
+                      height: 45,
                       child: ElevatedButton(
                         onPressed: _signUp,
                         style: ElevatedButton.styleFrom(
