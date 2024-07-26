@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iispark_edu/screen/video_screen.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
 import '../../widgets/custom_elevated_button.dart';
@@ -161,15 +162,23 @@ class Iphone1415ProMax1Screen extends StatelessWidget {
                                             ),
                                             Align(
                                               alignment: Alignment.topLeft,
-                                              child: Padding(
-                                                padding: EdgeInsets.only(
-                                                  left: 48.h,
-                                                  top: 2.v,
-                                                ),
-                                                child: Text(
-                                                  "Video",
-                                                  style: theme
-                                                      .textTheme.titleLarge,
+                                              child: GestureDetector(
+                                                onTap: () {
+                                                  Navigator.of(context).push(
+                                                      MaterialPageRoute(
+                                                          builder: (context) =>
+                                                              VideoPage()));
+                                                },
+                                                child: Padding(
+                                                  padding: EdgeInsets.only(
+                                                    left: 48.h,
+                                                    top: 2.v,
+                                                  ),
+                                                  child: Text(
+                                                    "Video",
+                                                    style: theme
+                                                        .textTheme.titleLarge,
+                                                  ),
                                                 ),
                                               ),
                                             ),
