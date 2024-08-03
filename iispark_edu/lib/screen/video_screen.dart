@@ -15,7 +15,7 @@ class _VideoPageState extends State<VideoPage> {
     super.initState();
     _controller = YoutubePlayerController(
       initialVideoId: '7HHs98PBgk0', // Replace with your video ID
-      flags: YoutubePlayerFlags(
+      flags: const YoutubePlayerFlags(
         autoPlay: false,
         mute: false,
       ),
@@ -29,29 +29,47 @@ class _VideoPageState extends State<VideoPage> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+            const SizedBox(
+              height: 30,
+            ),
             SizedBox(
-              height: 20,
+              width: MediaQuery.of(context).size.width,
+              child: Text(
+                "Video",
+                style: GoogleFonts.exo(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Color.fromRGBO(54, 67, 86, 1),
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            SizedBox(
+              height: 17,
             ),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage(
                       'https://i.ytimg.com/an_webp/6Pl9x8DkENY/mqdefault_6s.webp?du=3000&sqp=CJK41LQG&rs=AOn4CLAYsuHXohzxUZGlpzrdoO4ELHISFA'), // Add your local asset image
                   fit: BoxFit.cover,
                 ),
               ),
-              child: AspectRatio(
-                aspectRatio: 16 / 9,
-                child: YoutubePlayer(
-                  controller: _controller,
-                  showVideoProgressIndicator: true,
-                  progressIndicatorColor: Colors.blueAccent,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(11),
+                child: AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: YoutubePlayer(
+                    controller: _controller,
+                    showVideoProgressIndicator: true,
+                    progressIndicatorColor: Colors.blueAccent,
+                  ),
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Art Class Youtube Intro Education Video in Rainbow Surrealism',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -59,7 +77,7 @@ class _VideoPageState extends State<VideoPage> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            Spacer(),
+            const Spacer(),
             SizedBox(
               width: 250,
               height: 45,
@@ -79,6 +97,11 @@ class _VideoPageState extends State<VideoPage> {
               ),
             ),
             const SizedBox(height: 20),
+            SizedBox(
+              child: Image.asset(
+                  "asset/video_player.png"),
+            ),
+            const SizedBox(height: 35),
           ],
         ),
       ),

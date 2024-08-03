@@ -91,6 +91,8 @@ flutter:
     - asset/mainback.png
     - asset/Vector 8.png
     - asset/logo.png
+    - asset/video_player.png
+    - asset/congrats.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

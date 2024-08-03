@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:iispark_edu/screen/quiz_screen.dart';
 import 'package:iispark_edu/screen/video_screen.dart';
 import '../../core/app_export.dart';
 import '../../theme/custom_button_style.dart';
@@ -185,6 +186,18 @@ class Iphone1415ProMax1Screen extends StatelessWidget {
                                             CustomElevatedButton(
                                               width: 170.h,
                                               text: "Practical",
+                                              isDisabled: false,
+                                              onPressed: () {
+                                                Navigator.of(context).push(
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                      
+                                      
+                                      
+                                      
+                                      
+                                                            const QuizScreen()));
+                                              },
                                               margin:
                                                   EdgeInsets.only(top: 188.v),
                                               buttonStyle:
