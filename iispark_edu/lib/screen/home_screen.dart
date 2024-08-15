@@ -64,7 +64,7 @@ class CustomAppBarState extends State<CustomAppBar> {
           color: Color.fromRGBO(86, 103, 253, 1),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(top: 20.0, left: 16.0, right: 16.0),
+          padding: const EdgeInsets.only(top: 0.0, left: 16.0, right: 16.0),
           child: Row(
             children: [
               GestureDetector(
